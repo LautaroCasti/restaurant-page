@@ -22,7 +22,32 @@ export default function menu(parentNode) {
     menuImg.classList.add("menu__img");
     menuImg.setAttribute("src", pictures[i]);
 
+    const menuContent = document.createElement("div")
+    menuContent.classList.add("menu__content");
+
+    const menuTitle = document.createElement("h2");
+    menuTitle.classList.add("menu__title");
+    menuTitle.textContent = titles[i];
+
+    const menuText = document.createElement("p");
+    menuText.classList.add("menu__text");
+    menuText.textContent = text[i];
+
+    const menuPrice = document.createElement("p");
+    menuPrice.classList.add("menu__price");
+    menuPrice.textContent = prices[i];
+
+    menuContent.appendChild(menuTitle);
+    menuContent.appendChild(menuText);
+    menuContent.appendChild(menuPrice);
+
+    menuCard.appendChild(menuImg);
+    menuCard.appendChild(menuContent);
+
+    menu.appendChild(menuCard);
   }
 
+  menuContainer.appendChild(menu);
 
+  parentNode.appendChild(menuContainer);
 }
