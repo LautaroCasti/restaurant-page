@@ -1,53 +1,78 @@
-export default function menu(parentNode) {
+function createCard(img, plate, price) {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const image = document.createElement("img");
+  image.setAttribute("src", img);
+  image.classList.add("card-img");
+
+  const plateName = document.createElement("p");
+  plateName.classList.add("card-plate");
+
+  const cardPrice = document.createElement("p");
+  cardPrice.classList.add("card-price");
+
+  card.appendChild(image);
+  card.appendChild(plateName);
+  card.appendChild(cardPrice);
+
+  return card;
+};
+
+function createMenu() {
+
+  const main = document.querySelector("#main");
+
+  const tabTitle = document.createElement("h2");
+  tabTitle.classList.add("tab-title");
+  tabTitle.textContent = "menu";
+
+  const menuContainer = document.createElement("article");
+  menuContainer.classList.add("menu-container")
+
   // Content for the menu cards
-  const pictures = ["./img/noodles.jpg", "./img/hamburger.jpg", "./img/chocolate_cake.jpg"];
+  menuContainer.appendChild(createCard("./img/noodles.jpg", "Noodles with shrink", "$20"));
+  menuContainer.appendChild(createCard("./img/chocolate_cake.jpg", "Chocolate cake", "$10"));
+  menuContainer.appendChild(createCard("./img/hamburger.jpg", "Hamburger", "$12"));
 
-  const text = ["Noodles with shrink, vegetables and a delicious sauce", "Hamburger with all you like", "A really sweet chocolate cake with cream and jam"];
 
-  const titles = ["Noodles with shrink", "Hamburger", "Chocolate cake"];
 
-  const prices = ["$20", "$12", "10"];
 
-  const menuContainer = document.createElement("section");
-  menuContainer.classList.add("container")
+  // for (let i = 0; i < 3; i++) {
+  //   const menuCard = document.createElement("div");
+  //   menuCard.classList.add("menu__card");
 
-  const menu = document.createElement("div");
-  menu.classList.add("container__menu")
+  //   const menuImg = document.createElement("img");
+  //   menuImg.classList.add("menu__img");
+  //   menuImg.setAttribute("src", pictures[i]);
 
-  for (let i = 0; i < 3; i++) {
-    const menuCard = document.createElement("div");
-    menuCard.classList.add("menu__card");
+  //   const menuContent = document.createElement("div")
+  //   menuContent.classList.add("menu__content");
 
-    const menuImg = document.createElement("img");
-    menuImg.classList.add("menu__img");
-    menuImg.setAttribute("src", pictures[i]);
+  //   const menuTitle = document.createElement("h2");
+  //   menuTitle.classList.add("menu__title");
+  //   menuTitle.textContent = titles[i];
 
-    const menuContent = document.createElement("div")
-    menuContent.classList.add("menu__content");
+  //   const menuText = document.createElement("p");
+  //   menuText.classList.add("menu__text");
+  //   menuText.textContent = text[i];
 
-    const menuTitle = document.createElement("h2");
-    menuTitle.classList.add("menu__title");
-    menuTitle.textContent = titles[i];
+  //   const menuPrice = document.createElement("p");
+  //   menuPrice.classList.add("menu__price");
+  //   menuPrice.textContent = prices[i];
 
-    const menuText = document.createElement("p");
-    menuText.classList.add("menu__text");
-    menuText.textContent = text[i];
+  //   menuContent.appendChild(menuTitle);
+  //   menuContent.appendChild(menuText);
+  //   menuContent.appendChild(menuPrice);
 
-    const menuPrice = document.createElement("p");
-    menuPrice.classList.add("menu__price");
-    menuPrice.textContent = prices[i];
+  //   menuCard.appendChild(menuImg);
+  //   menuCard.appendChild(menuContent);
 
-    menuContent.appendChild(menuTitle);
-    menuContent.appendChild(menuText);
-    menuContent.appendChild(menuPrice);
+  //   menu.appendChild(menuCard);
+  // }
 
-    menuCard.appendChild(menuImg);
-    menuCard.appendChild(menuContent);
+  main.appendChild(tabTitle);
+  main.appendChild(menuContainer);
+};
 
-    menu.appendChild(menuCard);
-  }
-
-  menuContainer.appendChild(menu);
-
-  parentNode.appendChild(menuContainer);
-}
+export default createMenu;
