@@ -1,10 +1,13 @@
-export default function contact(parentNode) {
+function createContact() {
+
+  const main = document.querySelector("#main");
+
   const contactContainer = document.createElement("div");
   contactContainer.classList.add("contact")
 
-  const contactPoster = document.createElement("h1");
-  contactPoster.classList.add("contact__poster");
-  contactPoster.textContent = "CONTACT US";
+  const tabTitle = document.createElement("h2");
+  tabTitle.classList.add("tab-title");
+  tabTitle.textContent = "CONTACT US";
 
   const contactInfo = document.createElement("div");
   contactInfo.classList.add("contact__info");
@@ -20,8 +23,10 @@ export default function contact(parentNode) {
   contactInfo.appendChild(contactNumber);
   contactInfo.appendChild(contactLocation);
 
-  contactContainer.appendChild(contactPoster);
   contactContainer.appendChild(contactInfo);
 
-  parentNode.appendChild(contactContainer);
-}
+  main.appendChild(tabTitle);
+  main.appendChild(contactContainer);
+};
+
+export default createContact;
