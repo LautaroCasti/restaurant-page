@@ -14,7 +14,7 @@ function createContact() {
 
   const contactNumber = document.createElement("p");
   contactNumber.classList.add("contact__number");
-  contact.textContent = "11-2222-3333";
+  contactNumber.textContent = "11-2222-3333";
 
   const contactLocation = document.createElement("div");
   contactLocation.classList.add("contact__location");
