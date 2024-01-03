@@ -5,18 +5,54 @@
 }
 
 :root {
-  --bg-color: rgb(41, 39, 39);
+  --bg-dark: rgba(0, 0, 0, 0.9);
+  --primary-text: #fff;
+  --btn-hover: rgba(1, 1, 1, 0.9);
+}
+
+body {
+  background-image: url(./img/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #header {
+  color: var(--primary-text);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2.5rem 0;
-  background-color: var(--bg-color);
+  width: 100%;
+  background-color: var(--bg-dark);
 }
 
 #header h1 {
   font-size: 3rem;
   font-weight: bold;
+}
+
+#nav {
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.btn-container {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  color: var(--primary-text);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+  cursor: pointer;
 }

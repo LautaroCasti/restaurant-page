@@ -21,7 +21,8 @@ function createCard(img, plate, price) {
 
 function createMenu() {
 
-  const main = document.querySelector("#main");
+  const tabContainer = document.createElement("div");
+  tabContainer.classList.add("tab-container")
 
   const tabTitle = document.createElement("h2");
   tabTitle.classList.add("tab-title");
@@ -31,9 +32,9 @@ function createMenu() {
   menuContainer.classList.add("menu-container")
 
   // Content for the menu cards
-  menuContainer.appendChild(createCard("./img/noodles.jpg", "Noodles with shrink", "$20"));
-  menuContainer.appendChild(createCard("./img/chocolate_cake.jpg", "Chocolate cake", "$10"));
-  menuContainer.appendChild(createCard("./img/hamburger.jpg", "Hamburger", "$12"));
+  menuContainer.appendChild(createCard("./img/plates/noodles.jpg", "Noodles with shrink", "$20"));
+  menuContainer.appendChild(createCard("./img/plates/chocolate_cake.jpg", "Chocolate cake", "$10"));
+  menuContainer.appendChild(createCard("./img/plates/hamburger.jpg", "Hamburger", "$12"));
 
 
 
@@ -71,8 +72,10 @@ function createMenu() {
   //   menu.appendChild(menuCard);
   // }
 
-  main.appendChild(tabTitle);
-  main.appendChild(menuContainer);
+  tabContainer.appendChild(tabTitle);
+  tabContainer.appendChild(menuContainer);
+
+  return tabContainer;
 };
 
 export default createMenu;

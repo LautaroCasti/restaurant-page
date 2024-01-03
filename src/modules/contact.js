@@ -1,9 +1,10 @@
 function createContact() {
 
-  const main = document.querySelector("#main");
+  const tabContainer = document.createElement("div");
+  tabContainer.classList.add("tab-container")
 
   const contactContainer = document.createElement("div");
-  contactContainer.classList.add("contact")
+  contactContainer.classList.add("contact-container")
 
   const tabTitle = document.createElement("h2");
   tabTitle.classList.add("tab-title");
@@ -25,8 +26,10 @@ function createContact() {
 
   contactContainer.appendChild(contactInfo);
 
-  main.appendChild(tabTitle);
-  main.appendChild(contactContainer);
+  tabContainer.appendChild(tabTitle);
+  tabContainer.appendChild(contactContainer);
+
+  return tabContainer;
 };
 
 export default createContact;

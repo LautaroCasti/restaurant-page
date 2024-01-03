@@ -28,13 +28,18 @@ function createNav(id) {
   const nav = document.createElement("nav");
   nav.setAttribute("id", id);
 
+  const btnContainer = document.createElement("div");
+  btnContainer.classList.add("btn-container");
+
   const homeBtn = createBtn("home", "home");
   const menuBtn = createBtn("menu", "menu");
   const contactBtn = createBtn("contact", "contact");
 
-  nav.appendChild(homeBtn);
-  nav.appendChild(menuBtn);
-  nav.appendChild(contactBtn);
+  btnContainer.appendChild(homeBtn);
+  btnContainer.appendChild(menuBtn);
+  btnContainer.appendChild(contactBtn);
+
+  nav.appendChild(btnContainer);
 
   return nav;
 };
@@ -42,9 +47,7 @@ function createNav(id) {
 function createBtn(id, text) {
   const btn = document.createElement("button");
   btn.setAttribute("id", id);
-  const span = document.createElement("span");
-  span.textContent = text;
-  btn.appendChild(span);
+  btn.textContent = text;
 
   return btn;
 };
