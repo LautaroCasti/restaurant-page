@@ -21,8 +21,7 @@ function createCard(img, plate, price) {
 
 function createMenu() {
 
-  const tabContainer = document.createElement("div");
-  tabContainer.classList.add("tab-container")
+  const main = document.querySelector("#main");
 
   const tabTitle = document.createElement("h2");
   tabTitle.classList.add("tab-title");
@@ -72,10 +71,8 @@ function createMenu() {
   //   menu.appendChild(menuCard);
   // }
 
-  tabContainer.appendChild(tabTitle);
-  tabContainer.appendChild(menuContainer);
-
-  return tabContainer;
+  main.appendChild(tabTitle);
+  main.appendChild(menuContainer);
 };
 
 export default createMenu;

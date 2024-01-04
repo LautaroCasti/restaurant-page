@@ -17,9 +17,7 @@ function createHome() {
 
   homeDiv.appendChild(tabTitle);
 
-  tabContainer.appendChild(homeDiv);
-
-  return tabContainer;
+  main.appendChild(homeDiv);
 }
 
 export default createHome;

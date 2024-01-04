@@ -16,6 +16,7 @@ body {
   background-size: cover;
 }
 
+/* Header ----------------------------------- */
 #header {
   color: var(--primary-text);
   display: flex;
@@ -31,6 +32,9 @@ body {
   font-weight: bold;
 }
 
+/* ------------------------------------------- */
+
+/* Nav ---------------------------------------- */
 #nav {
   background-color: var(--bg-dark);
   display: flex;
@@ -55,4 +59,13 @@ button {
 button:hover {
   background-color: var(--btn-hover);
   cursor: pointer;
+}
+
+/* ------------------------------------------- */
+
+
+/* Footer ------------------------------------ */
+#footer {
+  background-color: var(--bg-dark);
+  color: var(--primary-text);
 }
