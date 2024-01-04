@@ -27,13 +27,14 @@ function createMenu() {
   tabTitle.classList.add("tab-title");
   tabTitle.textContent = "menu";
 
-  const menuContainer = document.createElement("article");
-  menuContainer.classList.add("menu-container")
+  const menu = document.createElement("div");
+  menu.classList.add("menu")
 
+  menu.appendChild(tabTitle);
   // Content for the menu cards
-  menuContainer.appendChild(createCard("./img/plates/noodles.jpg", "Noodles with shrink", "$20"));
-  menuContainer.appendChild(createCard("./img/plates/chocolate_cake.jpg", "Chocolate cake", "$10"));
-  menuContainer.appendChild(createCard("./img/plates/hamburger.jpg", "Hamburger", "$12"));
+  menu.appendChild(createCard("./img/plates/noodles.jpg", "Noodles with shrink", "$20"));
+  menu.appendChild(createCard("./img/plates/chocolate_cake.jpg", "Chocolate cake", "$10"));
+  menu.appendChild(createCard("./img/plates/hamburger.jpg", "Hamburger", "$12"));
 
 
 
@@ -71,8 +72,7 @@ function createMenu() {
   //   menu.appendChild(menuCard);
   // }
 
-  main.appendChild(tabTitle);
-  main.appendChild(menuContainer);
+  main.appendChild(menu);
 };
 
 export default createMenu;

@@ -12,7 +12,7 @@ function createHeader(id, text) {
 function createFooter(id, text) {
   const footer = document.createElement("footer");
   footer.setAttribute("id", id);
-  const footerText = document.createElement("h3");
+  const footerText = document.createElement("p");
   footerText.textContent = text;
   footer.appendChild(footerText);
   return footer;
@@ -31,9 +31,9 @@ function createNav(id) {
   const btnContainer = document.createElement("div");
   btnContainer.classList.add("btn-container");
 
-  const homeBtn = createBtn("home", "home");
-  const menuBtn = createBtn("menu", "menu");
-  const contactBtn = createBtn("contact", "contact");
+  const homeBtn = createBtn("home-btn", "home");
+  const menuBtn = createBtn("menu-btn", "menu");
+  const contactBtn = createBtn("contact-btn", "contact");
 
   btnContainer.appendChild(homeBtn);
   btnContainer.appendChild(menuBtn);

@@ -7,9 +7,9 @@ function addEventsToNav() {
 
   const main = document.querySelector("#main");
 
-  const homeBtn = document.querySelector("#home");
-  const menuBtn = document.querySelector("#menu");
-  const contactBtn = document.querySelector("#contact");
+  const homeBtn = document.querySelector("#home-btn");
+  const menuBtn = document.querySelector("#menu-btn");
+  const contactBtn = document.querySelector("#contact-btn");
 
   homeBtn.addEventListener("click", () => {
     main.textContent = "";

@@ -1,10 +1,9 @@
 function createHome() {
 
-  const tabContainer = document.createElement("div");
-  tabContainer.classList.add("tab-container");
+  const main = document.querySelector("#main");
 
-  const homeDiv = document.createElement("div");
-  homeDiv.classList.add("home-container");
+  const home = document.createElement("div");
+  home.classList.add("home");
 
   const tabTitle = document.createElement("h2");
   tabTitle.classList.add("tab-title");
@@ -15,9 +14,10 @@ function createHome() {
   homeAbout.textContent = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est debitis quae perferendis delectus quo cum quidem tempora, enim vitae non tempore, laudantium molestias iusto corporis? Voluptates harum dignissimos ratione rerum.
 `;
 
-  homeDiv.appendChild(tabTitle);
+  home.appendChild(tabTitle);
+  home.appendChild(homeAbout);
 
-  main.appendChild(homeDiv);
+  main.appendChild(home);
 }
 
 export default createHome;
