@@ -6,15 +6,22 @@ function createCard(img, plate, price) {
   image.setAttribute("src", img);
   image.classList.add("card-img");
 
+  const cardText = document.createElement("div");
+  cardText.classList.add("card-text");
+
   const plateName = document.createElement("p");
   plateName.classList.add("card-plate");
+  plateName.textContent = plate;
 
   const cardPrice = document.createElement("p");
   cardPrice.classList.add("card-price");
+  cardPrice.textContent = price;
+
+  cardText.appendChild(plateName);
+  cardText.appendChild(cardPrice);
 
   card.appendChild(image);
-  card.appendChild(plateName);
-  card.appendChild(cardPrice);
+  card.appendChild(cardText);
 
   return card;
 };
@@ -25,7 +32,7 @@ function createMenu() {
 
   const tabTitle = document.createElement("h2");
   tabTitle.classList.add("tab-title");
-  tabTitle.textContent = "menu";
+  tabTitle.textContent = "Menu";
 
   const menu = document.createElement("div");
   menu.classList.add("menu")

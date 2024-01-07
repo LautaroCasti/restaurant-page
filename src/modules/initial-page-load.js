@@ -6,6 +6,9 @@ function createHeader(id, text) {
   logo.textContent = text;
   header.appendChild(logo);
 
+  const nav = createNav("nav");
+  header.appendChild(nav);
+
   return header;
 };
 
@@ -28,18 +31,13 @@ function createNav(id) {
   const nav = document.createElement("nav");
   nav.setAttribute("id", id);
 
-  const btnContainer = document.createElement("div");
-  btnContainer.classList.add("btn-container");
+  const homeBtn = createBtn("home-btn", "Home");
+  const menuBtn = createBtn("menu-btn", "Menu");
+  const contactBtn = createBtn("contact-btn", "Contact");
 
-  const homeBtn = createBtn("home-btn", "home");
-  const menuBtn = createBtn("menu-btn", "menu");
-  const contactBtn = createBtn("contact-btn", "contact");
-
-  btnContainer.appendChild(homeBtn);
-  btnContainer.appendChild(menuBtn);
-  btnContainer.appendChild(contactBtn);
-
-  nav.appendChild(btnContainer);
+  nav.appendChild(homeBtn);
+  nav.appendChild(menuBtn);
+  nav.appendChild(contactBtn);
 
   return nav;
 };
@@ -58,10 +56,6 @@ function loadPage() {
   // Header
   const header = createHeader("header", "La velette");
   container.appendChild(header);
-
-  // Nav 
-  const nav = createNav("nav");
-  container.appendChild(nav);
 
   // Main
   const main = createMain("main");

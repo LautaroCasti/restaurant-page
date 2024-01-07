@@ -3,11 +3,11 @@ function createContact() {
   const main = document.querySelector("#main");
 
   const contact = document.createElement("div");
-  contactContainer.classList.add("contact")
+  contact.classList.add("contact")
 
   const tabTitle = document.createElement("h2");
   tabTitle.classList.add("tab-title");
-  tabTitle.textContent = "CONTACT US";
+  tabTitle.textContent = "Contact Us";
 
   const contactInfo = document.createElement("div");
   contactInfo.classList.add("contact-info");
