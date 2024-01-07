@@ -13,16 +13,25 @@ function addEventsToNav() {
 
   homeBtn.addEventListener("click", () => {
     main.textContent = "";
+    homeBtn.classList.toggle("active");
+    menuBtn.classList.remove("active");
+    contactBtn.classList.remove("active");
     createHome();
   });
 
   menuBtn.addEventListener("click", () => {
     main.textContent = "";
+    homeBtn.classList.remove("active");
+    menuBtn.classList.toggle("active");
+    contactBtn.classList.remove("active");
     createMenu();
   });
 
   contactBtn.addEventListener("click", () => {
     main.textContent = "";
+    homeBtn.classList.remove("active");
+    menuBtn.classList.remove("active");
+    contactBtn.classList.toggle("active");
     createContact();
   });
 }

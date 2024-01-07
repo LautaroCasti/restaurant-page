@@ -32,6 +32,7 @@ function createNav(id) {
   nav.setAttribute("id", id);
 
   const homeBtn = createBtn("home-btn", "Home");
+  homeBtn.classList.add("active");
   const menuBtn = createBtn("menu-btn", "Menu");
   const contactBtn = createBtn("contact-btn", "Contact");
 

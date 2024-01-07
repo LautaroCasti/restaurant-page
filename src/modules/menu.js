@@ -30,14 +30,9 @@ function createMenu() {
 
   const main = document.querySelector("#main");
 
-  const tabTitle = document.createElement("h2");
-  tabTitle.classList.add("tab-title");
-  tabTitle.textContent = "Menu";
-
   const menu = document.createElement("div");
   menu.classList.add("menu")
 
-  menu.appendChild(tabTitle);
   // Content for the menu cards
   menu.appendChild(createCard("./img/plates/noodles.jpg", "Noodles with shrink", "$20"));
   menu.appendChild(createCard("./img/plates/chocolate_cake.jpg", "Chocolate cake", "$10"));

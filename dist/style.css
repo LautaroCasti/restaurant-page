@@ -79,6 +79,10 @@ button:hover {
   padding: 2rem;
 }
 
+.active {
+  border-bottom: 2px solid var(--primary-text);
+}
+
 /* ------------------------------------------- */
 
 /* Footer ------------------------------------ */

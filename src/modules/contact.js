@@ -5,10 +5,6 @@ function createContact() {
   const contact = document.createElement("div");
   contact.classList.add("contact")
 
-  const tabTitle = document.createElement("h2");
-  tabTitle.classList.add("tab-title");
-  tabTitle.textContent = "Contact Us";
-
   const contactInfo = document.createElement("div");
   contactInfo.classList.add("contact-info");
 
@@ -23,7 +19,6 @@ function createContact() {
   contactInfo.appendChild(contactNumber);
   contactInfo.appendChild(contactLocation);
 
-  contact.appendChild(tabTitle);
   contact.appendChild(contactInfo);
 
   main.appendChild(contact);
