@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-dark: rgba(0, 0, 0, 0.9);
+  --primary-text: #fff;
+  --btn-hover: rgba(1, 1, 1, 0.9);
+  --border-color: #222;
+}
+
+body {
+  background-image: url(./img/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Header ----------------------------------- */
+#header {
+  color: var(--primary-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+  width: 100%;
+  background-color: var(--bg-dark);
+}
+
+#header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* ------------------------------------------- */
+
+/* Nav ---------------------------------------- */
+#nav {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0 0 0;
+  margin-top: 2rem;
+}
+
+button {
+  color: var(--primary-text);
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-10%);
+}
+
+/* ------------------------------------------- */
+
+/* Main -------------------------------------- */
+#main {
+  color: var(--primary-text);
+  margin: 0 auto;
+  min-height: 40rem;
+  width: 50%;
+  background-color: var(--bg-dark);
+  border: 2px solid var(--border-color);
+  padding: 2rem;
+}
+
+.active {
+  border-bottom: 2px solid var(--primary-text);
+}
+
+/* ------------------------------------------- */
+
+/* Footer ------------------------------------ */
+#footer {
+  width: 100%;
+  background-color: var(--bg-dark);
+  color: var(--primary-text);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------------------------- */
+
+/* Menu -------------------------------------- */
+.card {
+  display: flex;
+  border: 2px solid var(--border-color);
+  margin: 1rem 0;
+}
+
+.card-img {
+  width: 15rem;
+  height: 10rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-text {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-plate {
+  font-size: 3em;
+}
+
+.card-price {
+  font-size: 2em;
+}
+
+/* ------------------------------------------- */
+
+/* Contact ----------------------------------- */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  font-size: 1.5em;
+}
+
+.contact-mail {
+  margin-bottom: 0.5rem;
+}
+
+.contact-number {
+  margin-bottom: 2rem;
+}
+
+/* -------------------------------------------- */
+
+/* Home -------------------------------------- */
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+}
