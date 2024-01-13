@@ -148,3 +148,15 @@ button:hover {
 .contact-number {
   margin-bottom: 2rem;
 }
+
+/* -------------------------------------------- */
+
+/* Home -------------------------------------- */
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+}
