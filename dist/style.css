@@ -127,3 +127,24 @@ button:hover {
 }
 
 /* ------------------------------------------- */
+
+/* Contact ----------------------------------- */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  font-size: 1.5em;
+}
+
+.contact-mail {
+  margin-bottom: 0.5rem;
+}
+
+.contact-number {
+  margin-bottom: 2rem;
+}
